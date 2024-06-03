@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import ChartsNav from "@/components/ChartsNav";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
 
@@ -29,7 +30,19 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="flex flex-col w-full px-8 py-8 gap-8">
+            <h1 className="text-3xl font-bold text-slate-50">
+              ROS Charts
+            </h1>
+            <div className="flex flex-row">
+              <aside className="w-1/6">
+                <ChartsNav/>
+              </aside>
+              <main className="w-5/6">
+                {children}
+              </main>
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
