@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 const ChartsLayout = ({children}: {children: ReactNode}) => {
   return (
-    <div>
+    <div className='flex w-full px-8'>
       {children}
     </div>
   )

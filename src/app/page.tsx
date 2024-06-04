@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export const navItems = [
   {name: "Motor Actual Position", href: "/charts"},
@@ -8,9 +9,10 @@ export const navItems = [
 ];
 
 export default function Home() {
+  redirect("/charts")
   return (
     <div className="w-full">
-      Hello
+      Something went wrong
     </div>
   );
 }
