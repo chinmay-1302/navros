@@ -13,7 +13,7 @@ function ChartsNav() {
       {navItems.map( (item, index) => (
         <Link key={index} href={item.href}>
           <span className={cn(
-            "group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground", pathname === item.href ? 'bg-accent' : 'bg-transparent'
+            "group flex items-center rounded-md px-3 py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground", pathname === item.href ? 'bg-accent' : 'bg-transparent'
           )}>
             <span>{item.name}</span>
           </span>
